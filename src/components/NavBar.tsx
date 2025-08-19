@@ -3,6 +3,8 @@ import Link from "next/link";
 import DarkModeToggle from './DarkModeToggle';
 import Image from "next/image";
 
+const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL ?? "#";
+
 export function NavBar() {
     return (
         <nav className="navbar">
@@ -16,7 +18,7 @@ export function NavBar() {
                     <DarkModeToggle />
                 </li>
                 <li>
-                    <Link href="https://github.com/J-Moment" target="_blank" rel="noopener noreferrer">
+                    <Link href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
                         <Image 
                             src="/icons/GithubIcon.png"
                             alt="Github"
